@@ -17,9 +17,15 @@ function App() {
         return "Toy Haven | Home";
       case "/blog":
         return "Toy Haven | Blog";
+
       case "/alltoy":
         return "Toy Haven | All Toy";
-      // Add more routes and corresponding titles as needed
+
+      case "/mytoys":
+        return "Toy Haven | My Toys";
+      case "/addtoy":
+        return "Toy Haven | Add Toy";
+
       default:
         return "Toy Haven | Your Ultimate Toy Marketplace";
     }

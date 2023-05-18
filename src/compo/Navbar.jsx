@@ -90,7 +90,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center  items-center">
             <Link to="/">
               <img className="w-36 h-auto" src={logo} alt="" />
             </Link>
@@ -98,7 +98,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-semibold ">
+          <ul className="menu menu-horizontal px-52  font-semibold ">
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "default")}
@@ -111,7 +111,7 @@ const Navbar = () => {
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               {" "}
-              <span className="ms-3">Blog</span>
+              <span className="ms-6">Blog</span>
             </NavLink>
 
 
@@ -120,7 +120,7 @@ const Navbar = () => {
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               {" "}
-              <span className="ms-3">All Toy</span>
+              <span className="ms-6">All Toy</span>
             </NavLink>
 
             {/* conditional */}
@@ -132,15 +132,15 @@ const Navbar = () => {
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               {" "}
-              <span className="ms-3">My Toys</span>
+              <span className="ms-6">My Toys</span>
             </NavLink>
 
             <NavLink
-              to="/add toy"
+              to="/addtoy"
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               {" "}
-              <span className="ms-3">Add Toy</span>
+              <span className="ms-6">Add Toy</span>
             </NavLink>
             
             </>) :(

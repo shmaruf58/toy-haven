@@ -10,6 +10,11 @@ import Blog from "./compo/Blog.jsx";
 import Login from "./compo/login/Login.jsx";
 import Signup from "./compo/signUp/Signup.jsx";
 import AuthProvider from "./compo/providers/AuthProvider.jsx";
+import Mytoys from "./compo/Mytoys.jsx";
+import Addtoy from "./compo/Addtoy/Addtoy.jsx";
+import Details from "./compo/Details.jsx";
+import PrivateRoute from "./compo/routes/PrivateRoute.jsx";
+
 
 
 
@@ -26,10 +31,6 @@ const router = createBrowserRouter([
         element:<Home></Home>
       },
       {
-        path: "/alltoy",
-        element: <Alltoy></Alltoy>
-      },
-      {
         path: "/blog",
         element:<Blog></Blog>
       },
@@ -42,6 +43,34 @@ const router = createBrowserRouter([
         path: '/signup', 
         element: <Signup></Signup>
     },
+
+
+    {
+      path: "/alltoy",
+      element: <Alltoy></Alltoy>
+    },
+
+    {
+      path: "/mytoys",
+      element: <Mytoys></Mytoys>
+    },
+
+    {
+      path: "/addtoy",
+      element: <Addtoy></Addtoy>
+    },
+    
+    {
+      path: "/details/:id",
+      element: <PrivateRoute><Details></Details></PrivateRoute> 
+    },
+
+
+
+
+
+
+
 
     ],
   },
