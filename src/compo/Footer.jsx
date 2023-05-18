@@ -4,7 +4,7 @@ import logo from "../assets/logo-removebg-preview.png"
 const Footer = () => {
     return (
         <div>
-           <footer className="footer footer-center pb-3 h-auto bg-neutral text-primary-content">
+           <footer className="footer footer-center w-full pb-3 h-auto bg-neutral text-primary-content">
   <div>
    <img className="w-36 h-36" src={logo} alt="" />
     <p className="font-bold">
