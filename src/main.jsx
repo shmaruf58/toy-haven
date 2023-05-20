@@ -58,7 +58,7 @@ const router = createBrowserRouter([
     {
       path: '/toydetails/:id', 
       element: <Toydetails></Toydetails>,
-      loader: ()=> fetch('http://localhost:5000/bookings')
+      loader: ()=> fetch('https://el-server.vercel.app/bookings')
     },
 
     {

@@ -62,7 +62,7 @@ const Login = () => {
   return (
     <div className="bg-base-200 -mt-5 pt-16 pb-16">
     <div className="form-container bg-cyan-400 pb-10">
-      <h2 className="form-title me-6">Log In</h2>
+      <h2 className="form-title me-6">Log In Now</h2>
       <form onSubmit={handleLogIn}>
         <div className="form-control">
           <label htmlFor="email">Email</label>

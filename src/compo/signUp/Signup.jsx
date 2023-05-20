@@ -76,7 +76,7 @@ const Signup = () => {
 
     <div className="bg-base-200 -mt-5 pt-16 pb-16">
     <div className="form-container bg-cyan-400  pb-10">
-      <h2 className="form-title me-6">Sign Up </h2>
+      <h2 className="form-title me-6">Sign Up Now </h2>
    
 
       <form onSubmit={handleSignUp}>
