@@ -40,17 +40,18 @@ const Home = () => {
       </div>
 
       {/* Extra section */}
-      <div className="container mx-auto pt-16 pb-16">
+      <div className="container mx-auto w-full pt-16 pb-16">
         <Extra></Extra>
       </div>
 
       {/* Sub catagory */}
-      <div>
+      <div className="container w-full  mx-auto">
+        <h1 className="text-4xl ps-5 font-bold">Shop By Catagory</h1>
         <Subcat></Subcat>
       </div>
 
       {/* Gallery Section */}
-      <div className="container mx-auto mt-5 mb-16">
+      <div className="container w-full  mx-auto mt-5 mb-16">
         <h1 className="text-5xl  font-bold text-center pt-5 pb-16">
           Our Gallery
         </h1>
@@ -91,7 +92,7 @@ const Home = () => {
 
       {/* About Us Section */}
 
-      <section className="bg-gray-100 py-12">
+      <section className="bg-gray-100 w-full  py-12">
         <div className="container mx-auto px-4">
           <h2
             data-aos="fade-right"

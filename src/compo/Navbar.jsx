@@ -157,7 +157,7 @@ const Navbar = () => {
             
         { !user?.email ?  <>
           <Link to="/login">
-                <a className="btn btn-primary w-6 md:w-auto lg:uppercase lowercase">
+                <a className="btn btn-primary md:w-auto ">
                   Log In
                 </a>
               </Link>
