@@ -11,7 +11,7 @@ const Addtoy = () => {
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
-    const mail = user?.email
+    const mail = user?.email;
     const url = form.url.value;
     const toyname = form.toyname.value;
 
@@ -22,11 +22,10 @@ const Addtoy = () => {
     const rating = form.rating.value;
     const quantity = form.quantity.value;
     const desc = form.desc.value;
-    
 
     const booking = {
       sellerName: name,
-      email : email,
+      email: email,
       mail,
       url: url,
       toyName: toyname,
@@ -34,12 +33,8 @@ const Addtoy = () => {
       price: price,
       rating: rating,
       quantity: quantity,
-      desc: desc, 
+      desc: desc,
     };
-
-    
-
-    console.log(booking);
 
     fetch("https://el-server.vercel.app/bookings", {
       method: "POST",
@@ -59,9 +54,7 @@ const Addtoy = () => {
 
   return (
     <div className="bg-base-200 w-full">
-      <h2 className="text-center text-5xl font-bold pt-16 pb-16">
-        Add A Toy
-      </h2>
+      <h2 className="text-center text-5xl font-bold pt-16 pb-16">Add A Toy</h2>
 
       <form onSubmit={handleBookService} className="container mx-auto pb-16">
         <div className="grid grid-cols-1 md:grid-cols-3  ">
@@ -135,7 +128,11 @@ const Addtoy = () => {
             <label className="label">
               <span className="label-text">Rating</span>
             </label>
-            <input type="number" name="rating" className="input input-bordered" />
+            <input
+              type="number"
+              name="rating"
+              className="input input-bordered"
+            />
           </div>
 
           <div className="form-control">
