@@ -61,7 +61,7 @@ const Login = () => {
 
   return (
     <div className="bg-base-200 -mt-5 pt-16 pb-16">
-    <div className="form-container bg-teal-400 pb-10">
+    <div className="form-container bg-cyan-400 pb-10">
       <h2 className="form-title me-6">Log In</h2>
       <form onSubmit={handleLogIn}>
         <div className="form-control">
@@ -95,8 +95,8 @@ const Login = () => {
       <div className="">
         <img
           onClick={handleGoogleLogin}
-          className=" social-button"
-          src="https://i.ibb.co/gSTHXZJ/google-btn.png"
+          className=" social-button cursor-pointer"
+          src="https://icon-library.com/images/sign-in-with-google-icon/sign-in-with-google-icon-19.jpg"
           alt=""
         />
       </div>

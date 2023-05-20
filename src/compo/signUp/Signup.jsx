@@ -75,7 +75,7 @@ const Signup = () => {
   return (
 
     <div className="bg-base-200 -mt-5 pt-16 pb-16">
-    <div className="form-container bg-teal-400 pb-10">
+    <div className="form-container bg-cyan-400  pb-10">
       <h2 className="form-title me-6">Sign Up </h2>
    
 
@@ -133,7 +133,7 @@ const Signup = () => {
         <img
           onClick={handleGoogleLogin}
           className=" social-button"
-          src="https://i.ibb.co/gSTHXZJ/google-btn.png"
+          src="https://icon-library.com/images/sign-in-with-google-icon/sign-in-with-google-icon-19.jpg"
           alt=""
         />
       </div>
