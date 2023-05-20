@@ -11,6 +11,7 @@ const Addtoy = () => {
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
+    const mail = user?.email
     const url = form.url.value;
     const toyname = form.toyname.value;
 
@@ -21,10 +22,12 @@ const Addtoy = () => {
     const rating = form.rating.value;
     const quantity = form.quantity.value;
     const desc = form.desc.value;
+    
 
     const booking = {
       sellerName: name,
-      email: email,
+      email : email,
+      mail,
       url: url,
       toyName: toyname,
       catagory: selectedValue,
@@ -34,9 +37,11 @@ const Addtoy = () => {
       desc: desc, 
     };
 
+    
+
     console.log(booking);
 
-    fetch("http://localhost:5000/bookings", {
+    fetch("https://el-server.vercel.app/bookings", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -156,7 +161,7 @@ const Addtoy = () => {
           <input
             className="btn btn-primary btn-block"
             type="submit"
-            value="Order Confirm"
+            value="Add Toy"
           />
         </div>
       </form>

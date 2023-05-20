@@ -17,6 +17,7 @@ import PrivateRoute from "./compo/routes/PrivateRoute.jsx";
 import Addtoy from "./compo/Addtoy.jsx";
 import Alltoy from "./compo/Alltoy.jsx";
 import Toydetails from "./compo/Toydetails.jsx";
+import Update from "./compo/Update.jsx";
 
 
 
@@ -51,28 +52,37 @@ const router = createBrowserRouter([
     {
       path: "/alltoy",
       element: <Alltoy></Alltoy>,
-      loader: ()=> fetch('http://localhost:5000/bookings')
+      loader: ()=> fetch('https://el-server.vercel.app/bookings')
     },
 
     {
-      path: 'toydetails/:id', 
+      path: '/toydetails/:id', 
       element: <Toydetails></Toydetails>,
       loader: ()=> fetch('http://localhost:5000/bookings')
     },
 
     {
-      path: "/mytoys",
-      element: <Mytoys></Mytoys>
+      path: '/bookings', 
+      element: <PrivateRoute><Mytoys></Mytoys></PrivateRoute>
     },
+
 
     {
       path: "/addtoy",
-      element: <PrivateRoute><Addtoy></Addtoy></PrivateRoute>
+      element: <Addtoy></Addtoy>
     },
     
     {
       path: "/details/:id",
       element: <PrivateRoute><Details></Details></PrivateRoute> 
+    },
+
+    {
+      path: "/updatetoy/:id",
+      element: <Update></Update>,
+      loader: () => fetch('https://el-server.vercel.app/bookings')
+      
+
     },
 
 

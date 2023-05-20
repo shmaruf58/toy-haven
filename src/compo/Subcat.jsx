@@ -1,28 +1,24 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { Tab, Tabs, TabList, TabPanel,  } from 'react-tabs';
-import { ToastContainer, toast } from 'react-toastify';
-import { AuthContext } from './providers/AuthProvider';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "./providers/AuthProvider";
+import "react-toastify/dist/ReactToastify.css";
 
 const Subcat = () => {
-
-  
-    
-   
-    return (
-        <div className="container mx-auto px-4 py-8">
+  return (
+    <div className="container mx-auto px-4 py-8">
       <Tabs>
         <TabList className="flex mb-4">
           <Tab className="mr-4 px-4 py-2 bg-gray-200 rounded-md cursor-pointer">
-           Sports car
+            Sports car
           </Tab>
           <Tab className="mr-4 px-4 py-2 bg-gray-200 rounded-md cursor-pointer">
-          Truck
+            Truck
           </Tab>
           <Tab className="mr-4 px-4 py-2 bg-gray-200 rounded-md cursor-pointer">
-          Police car
+            Police car
           </Tab>
         </TabList>
 
@@ -35,7 +31,7 @@ const Subcat = () => {
               name="Red Sports Car"
               price="$19.99"
               rating="4.5"
-              carId ="1"
+              carId="1"
             />
             <ToyItem
               pictureUrl="https://pbs.twimg.com/media/DSnxkXlXkAA2QZG?format=jpg&name=4096x4096"
@@ -85,45 +81,40 @@ const Subcat = () => {
         </TabPanel>
       </Tabs>
     </div>
-    );
+  );
 };
 
-const ToyItem = ({ pictureUrl, name, price, rating, carId  }) => {
-  const { user} = useContext(AuthContext);
+const ToyItem = ({ pictureUrl, name, price, rating }) => {
+  const { user } = useContext(AuthContext);
 
-  const notify = () =>
+  const notify = () => {
+    {
+      !user?.email ? toast("You have to log in first to view details") : "";
+    }
+  };
 
-  {{ !user?.email ?  
-   
-    toast("You have to log in first to view details")
-  
-  : ""
- }}
-  
-  
+  return (
+    <div className="border rounded-md p-4">
+      <img
+        src={pictureUrl}
+        alt={name}
+        className="w-1/2 h-auto object-contain"
+      />
+      <h3 className="text-lg font-bold mt-2">{name}</h3>
+      <p className="text-gray-600 mb-2">Price: {price}</p>
+      <p className="text-gray-600 mb-2">Rating: {rating}</p>
 
-    return (
-      <div className="border rounded-md p-4">
-        <img
-          src={pictureUrl}
-          alt={name}
-          className="w-1/2 h-auto object-contain"
-        />
-        <h3 className="text-lg font-bold mt-2">{name}</h3>
-        <p className="text-gray-600 mb-2">Price: {price}</p>
-        <p className="text-gray-600 mb-2">Rating: {rating}</p>
-
-
-<Link to="">
-        <button onClick={notify} className="bg-blue-500 text-white py-2 px-4 rounded-md">
+      <Link to="/">
+        <button
+          onClick={notify}
+          className="bg-blue-500 text-white py-2 px-4 rounded-md"
+        >
           View Details
         </button>
         <ToastContainer />
-
-        </Link>
-
-      </div>
-    );
-  };
+      </Link>
+    </div>
+  );
+};
 
 export default Subcat;

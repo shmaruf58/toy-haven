@@ -66,7 +66,7 @@ const Navbar = () => {
             {user?.email ?(<>
             
               <NavLink
-              to="/mytoys"
+              to="/bookings"
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               {" "}
@@ -128,7 +128,7 @@ const Navbar = () => {
             {user?.email ?(<>
             
               <NavLink
-              to="/mytoys"
+              to="/bookings"
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               {" "}
@@ -180,6 +180,7 @@ const Navbar = () => {
                   }
                 />
               </Tooltip>
+              
 
               <button
                 className="btn btn-primary"

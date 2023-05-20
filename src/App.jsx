@@ -21,10 +21,12 @@ function App() {
       case "/alltoy":
         return "Toy Haven | All Toy";
 
-      case "/mytoys":
+      case "/bookings":
         return "Toy Haven | My Toys";
+
       case "/addtoy":
         return "Toy Haven | Add Toy";
+
 
       default:
         return "Toy Haven | Your Ultimate Toy Marketplace";
