@@ -16,13 +16,10 @@ const Update = () => {
     }
   }, [id, data]);
 
-  
-  
-  const {_id, price, quantity, desc} = details;
-  const toyId = _id; 
+  const { _id, price, quantity, desc } = details;
+  const toyId = _id;
 
   console.log(toyId);
-
 
   const handleUpdate = (event) => {
     event.preventDefault();
@@ -33,7 +30,6 @@ const Update = () => {
 
     const updatedtoy = { quantity, price, desc };
 
-   
     // send data to the server
     fetch(`https://el-server.vercel.app/bookings/${toyId}`, {
       method: "PATCH",
@@ -92,7 +88,8 @@ const Update = () => {
         </div>
 
         <div className=" mt-6">
-          <input onClick={()=> alert("Update Succesfully")}
+          <input
+            onClick={() => alert("Update Succesfully")}
             className="btn btn-primary btn-block"
             type="submit"
             value="Update Toy"
