@@ -17,9 +17,9 @@ const Update = () => {
   }, [id, data]);
 
   const { _id, price, quantity, desc } = details;
-  const toyId = _id;
+ 
 
-  console.log(toyId);
+  
 
   const handleUpdate = (event) => {
     event.preventDefault();
@@ -29,10 +29,11 @@ const Update = () => {
     const desc = form.desc.value;
 
     const updatedtoy = { quantity, price, desc };
+    console.log(updatedtoy);
 
     // send data to the server
-    fetch(`https://el-server.vercel.app/bookings/${toyId}`, {
-      method: "PATCH",
+    fetch(`https://el-server.vercel.app/bookings/${_id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
