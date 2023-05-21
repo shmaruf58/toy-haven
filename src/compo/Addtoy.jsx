@@ -68,6 +68,7 @@ const Addtoy = () => {
               type="text"
               defaultValue={user?.displayName}
               name="name"
+              required
               className="input input-bordered"
             />
           </div>
@@ -79,6 +80,7 @@ const Addtoy = () => {
             <input
               type="text"
               name="email"
+              required
               defaultValue={user?.email}
               placeholder="email"
               className="input input-bordered"
@@ -89,7 +91,7 @@ const Addtoy = () => {
             <label className="label">
               <span className="label-text">Picture URL</span>
             </label>
-            <input type="text" name="url" className="input input-bordered" />
+            <input type="text" name="url" required className="input input-bordered" />
           </div>
 
           <div className="form-control">
@@ -99,6 +101,7 @@ const Addtoy = () => {
             <input
               type="text"
               name="toyname"
+              required
               className="input input-bordered"
             />
           </div>
@@ -121,6 +124,7 @@ const Addtoy = () => {
             <input
               type="number"
               name="price"
+              required
               className="input input-bordered"
             />
           </div>
@@ -132,6 +136,7 @@ const Addtoy = () => {
             <input
               type="number"
               name="rating"
+              required
               className="input input-bordered"
             />
           </div>
@@ -143,6 +148,7 @@ const Addtoy = () => {
             <input
               type="number"
               name="quantity"
+              required
               className="input input-bordered"
             />
           </div>
@@ -151,7 +157,7 @@ const Addtoy = () => {
             <label className="label">
               <span className="label-text">Description</span>
             </label>
-            <input type="text" name="desc" className="input input-bordered" />
+            <input type="text" name="desc" required className="input input-bordered" />
           </div>
         </div>
 
