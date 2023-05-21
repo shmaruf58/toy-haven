@@ -10,7 +10,8 @@ const Footer = () => {
     <p className="font-bold">
     Toy Haven | Your Ultimate Toy car  Marketplace <br/>Providing reliable Toy since 1992
     </p> 
-    <p>Copyright © 2023 - All right reserved</p>
+    <p>Contact: +8801858163484</p>
+    <p>Copyright © 2023 - Toy Haven All right reserved</p>
   </div> 
   <div>
     <div className="grid grid-flow-col -mt-6 gap-4">
