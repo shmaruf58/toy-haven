@@ -17,11 +17,12 @@ const Addtoy = () => {
 
     const selectElement = form.elements.categorySelect;
     const selectedValue = selectElement.value;
-
-    const price = form.price.value;
+    
+    const price = parseFloat(form.price.value) ;
     const rating = form.rating.value;
     const quantity = form.quantity.value;
     const desc = form.desc.value;
+    
 
     const booking = {
       sellerName: name,

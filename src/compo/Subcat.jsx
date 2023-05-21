@@ -10,8 +10,6 @@ import { AuthContext } from "./providers/AuthProvider";
 import "react-toastify/dist/ReactToastify.css";
 
 const Subcat = () => {
-  const{user}= useContext(AuthContext);
-  console.log(user);
   return (
     <div className="container mx-auto px-4 py-8">
       <Tabs>

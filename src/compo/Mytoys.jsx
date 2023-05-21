@@ -6,7 +6,7 @@ import BookingRow from "./BookingRow";
 const Mytoys = () => {
   const { user } = useContext(AuthContext);
   const [bookings, setBookings] = useState([]);
-  
+  const [asc, setAsc] = useState(true);
 
   const url = `https://el-server.vercel.app/bookings?email=${user?.email}`;
   useEffect(() => {
@@ -15,26 +15,36 @@ const Mytoys = () => {
       .then((data) => setBookings(data));
   }, [url]);
 
-  const handleDelete = id => {
-    const proceed = confirm('Are You sure you want to delete');
+  const handleDelete = (id) => {
+    const proceed = confirm("Are You sure you want to delete");
     if (proceed) {
-        fetch(`https://el-server.vercel.app/bookings/${id}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.deletedCount > 0) {
-                    alert('deleted successful');
-                    const remaining = bookings.filter(booking => booking._id !== id);
-                    setBookings(remaining);
-                }
-            })
+      fetch(`https://el-server.vercel.app/bookings/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            alert("deleted successful");
+            const remaining = bookings.filter((booking) => booking._id !== id);
+            setBookings(remaining);
+          }
+        });
     }
-}
+  };
+  // sorting
+  useEffect(() => {
+    fetch(`https://el-server.vercel.app/bookings?sort=${asc ? "asc" : "desc"}`)
+      .then((res) => res.json())
+      .then((data) => setBookings(data));
+  }, [asc]);
 
   return (
     <div>
+      <h1 className="text-center my-3"> <button className="btn btn-primary" onClick={() => setAsc(!asc)}>
+        {asc ? "Ascending" : "Descending"}
+      </button></h1>
+     
       <div className="overflow-x-auto container mx-auto mt-6 mb-6">
         <table className="table w-full">
           {/* head*/}
@@ -58,7 +68,7 @@ const Mytoys = () => {
               <BookingRow
                 key={booking._id}
                 booking={booking}
-                 handleDelete={handleDelete}
+                handleDelete={handleDelete}
                 // handleBookingConfirm={handleBookingConfirm}
               ></BookingRow>
             ))}
