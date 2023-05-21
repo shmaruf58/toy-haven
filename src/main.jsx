@@ -48,7 +48,11 @@ const router = createBrowserRouter([
 
       {
         path: "/toydetails/:id",
-        element: <PrivateRoute><Toydetails></Toydetails></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <Toydetails></Toydetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("https://el-server.vercel.app/bookings"),
       },
 
@@ -69,8 +73,6 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-
-     
 
       {
         path: "/updatetoy/:id",
