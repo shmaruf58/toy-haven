@@ -47,7 +47,7 @@ const Toydetails = () => {
          <p className="pb-4 pt-1 font-semibold text-gray-600">
            Availabe Quantity: {details.quantity}
          </p>
-         <button className="btn btn-primary">Get Started</button>
+         <button className="btn btn-primary">Buy Now</button>
        </div>
      </div>
    </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import CoffeCard from "./CoffeCard";
+import Toytable from "./Toytable";
+
 
 const Alltoy = () => {
   const loadedCoffees = useLoaderData();
@@ -25,12 +26,12 @@ const Alltoy = () => {
       {/* row 1 */}
      
       {coffees.map((coffee) => (
-              <CoffeCard
+              <Toytable
                 key={coffee._id}
                 coffee={coffee}
                 coffees={coffees}
                 setCoffees={setCoffees}
-              ></CoffeCard>
+              ></Toytable>
             ))}
     
     </tbody>

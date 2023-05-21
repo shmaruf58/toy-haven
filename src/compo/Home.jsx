@@ -12,7 +12,7 @@ const Home = () => {
     <>
       {/* Banner Section */}
 
-      <div className="hero min-h-screen bg-base-200">
+      <div data-theme="night"  className="hero min-h-screen ">
         <div className="hero-content flex-col gap-16 lg:flex-row">
           <img
             src={logo}
@@ -25,7 +25,7 @@ const Home = () => {
               data-aos-duration="1000"
               className="text-5xl  font-bold md:px-0  px-6"
             >
-              Toy Haven: Your Ultimate Toy Car Emporium Extravaganza
+             <span className="title-text">Toy Haven:</span>  Your Ultimate Toy Car Emporium Extravaganza
             </h1>
             <p className="py-6 md:px-0 px-6">
               Experience the joy of play at Toy Haven - your ultimate

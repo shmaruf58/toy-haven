@@ -10,12 +10,11 @@ import Login from "./compo/login/Login.jsx";
 import Signup from "./compo/signUp/Signup.jsx";
 import AuthProvider from "./compo/providers/AuthProvider.jsx";
 import Mytoys from "./compo/Mytoys.jsx";
-import Details from "./compo/Details.jsx";
-import PrivateRoute from "./compo/routes/PrivateRoute.jsx";
 import Addtoy from "./compo/Addtoy.jsx";
 import Alltoy from "./compo/Alltoy.jsx";
 import Toydetails from "./compo/Toydetails.jsx";
 import Update from "./compo/Update.jsx";
+import PrivateRoute from "./compo/routes/PrivateRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -49,7 +48,7 @@ const router = createBrowserRouter([
 
       {
         path: "/toydetails/:id",
-        element: <Toydetails></Toydetails>,
+        element: <PrivateRoute><Toydetails></Toydetails></PrivateRoute>,
         loader: () => fetch("https://el-server.vercel.app/bookings"),
       },
 
@@ -71,14 +70,7 @@ const router = createBrowserRouter([
         ),
       },
 
-      {
-        path: "/details/:id",
-        element: (
-          <PrivateRoute>
-            <Details></Details>
-          </PrivateRoute>
-        ),
-      },
+     
 
       {
         path: "/updatetoy/:id",

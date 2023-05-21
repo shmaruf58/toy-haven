@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const BookingRow = ({booking, handleDelete}) => {
-    const { sellerName,  email, _id, toyName, quantity, price, catagory } = booking;
+    const { sellerName,  email, _id, toyName, quantity, desc, price, catagory } = booking;
    
     return (
         
@@ -15,6 +15,7 @@ const BookingRow = ({booking, handleDelete}) => {
         <td>{catagory}</td>
         <td>${price}</td>
         <td>{quantity}</td>
+        <td>{desc}</td>
     <td><Link to={`/updatetoy/${_id}`}>
      <button className="btn btn-primary mt-1">Update</button>
      </Link></td> 

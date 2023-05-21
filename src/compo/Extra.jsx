@@ -9,7 +9,7 @@ const Extra = () => {
     data-aos-duration="1000"><h1 className="text-5xl font-bold text-center pb-16">What We Are?</h1></div>
 
         <div  className="grid grid-cols-1 md:grid-cols-3 gap-4 px-3">
-      <div className="p-4 bg-white rounded shadow flex items-center">
+      <div className="p-4 bg-white rounded shadow flex items-center ">
         <div className="mr-4">
           <svg className="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 18l6-6-6-6" />
