@@ -61,7 +61,7 @@ const Addtoy = () => {
         <div className="grid grid-cols-1 md:grid-cols-3  ">
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Seller Name</span>
+              <span className="label-text">Name</span>
             </label>
 
             <input
@@ -75,7 +75,7 @@ const Addtoy = () => {
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Seller Email</span>
+              <span className="label-text">Email</span>
             </label>
             <input
               type="text"
